@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Local Environment Variables & Secrets
+.env
+.env.local
+*.env
+
+# Logs and scratch files
+*.log
+scratch/
+tmp/
+.temp/
+
+# OS metadata
+.DS_Store
+Thumbs.db

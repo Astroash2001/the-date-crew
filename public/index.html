@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Date Crew | Pre-Send Profile Gate & Compliance Guardrail</title>
+  <meta name="description" content="Assistive pre-send gate for professional matchmakers that converts rejection feedback into structured preferences and stops preventable preference violations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Top Navigation Header -->
+    <header class="top-nav" id="main-header">
+      <div class="nav-left">
+        <div class="logo-mark">
+          <span class="logo-icon">✦</span>
+          <div class="logo-text">
+            <span class="brand-name">THE DATE CREW</span>
+            <span class="brand-sub">PRE-SEND PROFILE GATE</span>
+          </div>
+        </div>
+        <div class="prototype-tag">MATCHMAKER OPERATING SYSTEM</div>
+      </div>
+
+      <div class="nav-right">
+        <div class="gateway-badge-container">
+          <span class="status-indicator-dot" id="gateway-status-dot"></span>
+          <span class="gateway-badge-text" id="gateway-status-label">Checking AI Gateway...</span>
+        </div>
+        <button id="btn-reset-demo" class="btn-ghost" title="Reset demo state to initial client data">
+          ↺ Reset Demo
+        </button>
+      </div>
+    </header>
+
+    <!-- Impact & Opportunity Hero Bar -->
+    <section class="metrics-bar" id="metrics-bar" aria-label="Key Performance Indicators">
+      <div class="metric-card">
+        <div class="metric-label">Preventable Conflict Baseline</div>
+        <div class="metric-value highlight-red">35.0%</div>
+        <div class="metric-sub">242 / 690 rejections violate known rules</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Projected Acceptance Rate</div>
+        <div class="metric-value highlight-green">40.9%</div>
+        <div class="metric-sub">+9.9% lift (310 / 758 shares)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Human Agency Guarantee</div>
+        <div class="metric-value highlight-blue">100%</div>
+        <div class="metric-sub">Matchmaker decides • Zero auto-emails</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Guardrail Philosophy</div>
+        <div class="metric-value">Boundary Gate</div>
+        <div class="metric-sub">Prevents errors • Not opaque ranking</div>
+      </div>
+    </section>
+
+    <!-- Main Workspace Grid -->
+    <main class="workspace-grid" id="main-workspace">
+
+      <!-- Column 1: Client Context & Confirmed Rules -->
+      <section class="panel client-panel" id="panel-client">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-step">STEP 1</span>
+            <h2>Active Client & Rules</h2>
+          </div>
+          <span class="badge badge-active">Active Sourcing</span>
+        </div>
+
+        <!-- Client Identity Card -->
+        <div class="client-card" id="client-card">
+          <div class="client-avatar-row">
+            <div class="avatar-ring">
+              <div class="avatar-fallback" id="client-initials">ER</div>
+            </div>
+            <div class="client-details">
+              <h3 id="client-name">Elena Rostova</h3>
+              <p class="client-meta" id="client-meta">31 yrs • London • Architectural Designer</p>
+              <div class="client-tags">
+                <span class="tag">Cohort: Aug 2026</span>
+                <span class="tag">Active Match Sourcing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Confirmed Preferences List -->
+        <div class="section-subheading">
+          <h3>Confirmed Preference Boundaries</h3>
+          <span class="count-pill" id="rules-count-pill">5 Rules</span>
+        </div>
+        <p class="section-desc">Active rules enforced by the pre-send gate. Unknown facts trigger review; conflicts trigger block.</p>
+
+        <div class="rules-list" id="confirmed-rules-container">
+          <!-- Populated by JS -->
+        </div>
+      </section>
+
+      <!-- Column 2: Rejection Feedback & AI Extraction -->
+      <section class="panel feedback-panel" id="panel-feedback">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-step">STEP 2</span>
+            <h2>Rejection Intelligence</h2>
+          </div>
+          <button id="btn-analyze-feedback" class="btn-primary">
+            <span class="btn-sparkle">✦</span>
+            <span>Analyze Feedback</span>
+          </button>
+        </div>
+
+        <div class="section-subheading">
+          <h3>Raw Client Feedback Notes</h3>
+          <span class="count-pill">2 Past Rejections</span>
+        </div>
+        <p class="section-desc">Unstructured notes submitted by Elena after recent first dates.</p>
+
+        <!-- Feedback Comments List -->
+        <div class="feedback-notes-list" id="feedback-notes-container">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- AI Extraction Output Area -->
+        <div class="extraction-card" id="extraction-results-area">
+          <div class="extraction-header">
+            <div class="extraction-title-group">
+              <span class="chip-live-status" id="extraction-provenance-badge">AI Analysis Ready</span>
+              <h4>Structured Rule Suggestions</h4>
+            </div>
+            <span class="confidence-badge" id="extraction-model-tag">Awaiting Trigger</span>
+          </div>
+
+          <p class="extraction-note" id="extraction-status-text">
+            Click <strong>"Analyze Feedback"</strong> to invoke the AI Gateway. Model extracts candidate rules with confidence scores and verbatim quotes for matchmaker confirmation.
+          </p>
+
+          <div class="suggestions-list" id="suggestions-container">
+            <!-- Populated dynamically upon analysis -->
+          </div>
+
+          <div class="ai-boundary-disclaimer">
+            <span class="info-icon">ℹ</span>
+            <span><strong>Human-in-the-loop guarantee:</strong> Extracted preferences are never applied silently. The matchmaker must confirm suggestions before they affect the gate.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Column 3: Candidate Selection & Pre-Send Gate Check -->
+      <section class="panel gate-panel" id="panel-gate">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-step">STEP 3</span>
+            <h2>Pre-Send Profile Gate</h2>
+          </div>
+          <button id="btn-run-gate-check" class="btn-accent">
+            <span>Run Pre-Send Check</span>
+            <span class="arrow-icon">→</span>
+          </button>
+        </div>
+
+        <div class="section-subheading">
+          <h3>Select Proposed Candidate</h3>
+          <span class="count-pill">5 Test Candidates</span>
+        </div>
+
+        <!-- Candidate Selector Selector -->
+        <div class="candidate-selector-wrapper">
+          <label for="candidate-select" class="visually-hidden">Select Candidate Profile</label>
+          <select id="candidate-select" class="custom-select">
+            <!-- Populated by JS -->
+          </select>
+        </div>
+
+        <!-- Selected Candidate Attributes Card -->
+        <div class="candidate-summary-card" id="candidate-summary-card">
+          <div class="cand-header-row">
+            <div>
+              <h4 id="cand-display-name">Julian Vance</h4>
+              <span class="cand-job" id="cand-display-job">33 yrs • London • Creative Director</span>
+            </div>
+            <span class="cand-badge-intent" id="cand-display-badge">Seeded Incompatible</span>
+          </div>
+          <p class="cand-bio" id="cand-display-bio">Brand designer and weekend cyclist. Enjoys social drinks and casual weekend cigarettes with friends.</p>
+
+          <div class="cand-facts-grid" id="cand-facts-grid">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Pre-Send Decision Banner Container -->
+        <div class="gate-decision-area" id="gate-decision-area">
+          <div class="decision-placeholder" id="decision-placeholder">
+            <div class="radar-scan-icon">◎</div>
+            <h4>Gate Check Pending</h4>
+            <p>Select a candidate above and click <strong>"Run Pre-Send Check"</strong> to verify compliance against Elena's confirmed rules before dispatch.</p>
+          </div>
+
+          <!-- Dynamic Result Box (Block / Review / Clear) -->
+          <div class="decision-result-box hidden" id="decision-result-box">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Action / Override Row -->
+        <div class="gate-actions-row hidden" id="gate-actions-row">
+          <button id="btn-open-override" class="btn-outline-danger">
+            ⚠️ Log Matchmaker Override Rationale
+          </button>
+          <button id="btn-simulate-send" class="btn-success disabled" disabled>
+            ✓ Ready to Dispatch Profile
+          </button>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Override Rationale Modal Dialog -->
+    <dialog id="override-dialog" class="custom-dialog">
+      <div class="dialog-content">
+        <div class="dialog-header">
+          <div class="dialog-title-group">
+            <span class="warning-triangle">⚠️</span>
+            <h3>Matchmaker Discretion Override</h3>
+          </div>
+          <button id="btn-close-dialog" class="btn-dialog-close" aria-label="Close dialog">✕</button>
+        </div>
+
+        <div class="dialog-body">
+          <div class="override-warning-box">
+            <p><strong>Intentional Exception:</strong> Matchmakers retain ultimate discretion to proceed if client nuances justify an exception. Overrides do NOT mutate saved preferences or send emails automatically.</p>
+          </div>
+
+          <div class="dialog-field">
+            <label for="override-matchmaker-name">Matchmaker Identity</label>
+            <input type="text" id="override-matchmaker-name" value="Lead Matchmaker (Curation Desk)" class="text-input">
+          </div>
+
+          <div class="dialog-field">
+            <label for="override-rationale">Mandatory Override Rationale <span class="req">*</span></label>
+            <textarea id="override-rationale" rows="3" class="text-area" placeholder="Explain the specific client discussion or context that justifies sending this profile despite the gate warning (e.g., 'Elena explicitly confirmed on phone that social smoking is acceptable if candidate is planning to quit')."></textarea>
+          </div>
+
+          <div class="dialog-audit-note">
+            This rationale will be recorded in the compliance audit trail for weekly cohort quality review.
+          </div>
+        </div>
+
+        <div class="dialog-footer">
+          <button id="btn-cancel-override" class="btn-ghost">Cancel</button>
+          <button id="btn-submit-override" class="btn-primary">Confirm & Log Override</button>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <!-- Educational Bottom Drawer -->
+    <footer class="system-footer">
+      <div class="footer-content">
+        <div class="footer-col">
+          <strong>The Date Crew Assessment Prototype</strong>
+          <span>Wave 1 & 2 Deliverable: Deterministic Gate + Experiential Labs AI Integration</span>
+        </div>
+        <div class="footer-col">
+          <strong>Architectural Constraint</strong>
+          <span>Assistive verification only. Never replaces human judgment or automates client messaging.</span>
+        </div>
+        <div class="footer-col stats-col">
+          <span class="metric-pill">Target Waste Elimination: 242 shares / 1,000</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
