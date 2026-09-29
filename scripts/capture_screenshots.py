@@ -26,14 +26,18 @@ def main():
             page.goto("http://localhost:3000", wait_until="networkidle")
             page.wait_for_timeout(1000)
 
-            # Capture initial view
+            # 0. Capture initial hero & value cards
             page.screenshot(path=str(screenshots_dir / "00-landing-state.png"))
             print("Captured: 00-landing-state.png")
+
+            # Scroll to workspace
+            page.evaluate("() => document.getElementById('main-workspace').scrollIntoView({ behavior: 'instant', block: 'start' })")
+            page.wait_for_timeout(600)
 
             # 1. Trigger Feedback Analysis
             page.click("#btn-analyze-feedback")
             page.wait_for_selector(".suggestion-item", timeout=5000)
-            page.wait_for_timeout(4500) # Wait for initial toast to fade away
+            page.wait_for_timeout(4500) # Wait for toast to fade
             page.screenshot(path=str(screenshots_dir / "01-feedback-analysis.png"))
             print("Captured: 01-feedback-analysis.png")
 
@@ -42,7 +46,7 @@ def main():
             page.wait_for_timeout(400)
             page.click("#btn-run-gate-check")
             page.wait_for_selector(".decision-result-box.status-block", timeout=5000)
-            page.wait_for_timeout(4500) # Wait for toast to fade away
+            page.wait_for_timeout(4500) # Wait for toast to fade
             page.screenshot(path=str(screenshots_dir / "02-conflict-blocked.png"))
             print("Captured: 02-conflict-blocked.png")
 

@@ -7,284 +7,342 @@
   <meta name="description" content="Assistive pre-send gate for professional matchmakers that converts rejection feedback into structured preferences and stops preventable preference violations.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Ambient Atmospheric Lighting -->
-  <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
-  <div class="ambient-glow glow-top-right" aria-hidden="true"></div>
-  <div class="ambient-glow glow-center" aria-hidden="true"></div>
 
-  <div class="app-layout">
-    <!-- Floating Island Top Navigation -->
-    <header class="top-nav-wrapper">
-      <div class="top-nav" id="main-header">
-        <div class="nav-left">
-          <div class="logo-mark">
-            <span class="logo-icon">✦</span>
-            <div class="logo-text">
-              <span class="brand-name">THE DATE CREW</span>
-              <span class="brand-sub">PRE-SEND PROFILE GATE</span>
-            </div>
-          </div>
-          <span class="divider-vertical" aria-hidden="true"></span>
-          <div class="prototype-tag">
-            <span class="tag-pulse"></span>
-            <span>MATCHMAKER CONSOLE</span>
-          </div>
-        </div>
+  <div class="site-container">
 
-        <div class="nav-right">
-          <div class="gateway-badge-container">
-            <span class="status-indicator-dot" id="gateway-status-dot"></span>
-            <span class="gateway-badge-text" id="gateway-status-label">Checking AI Gateway...</span>
-          </div>
-          <button id="btn-reset-demo" class="btn-ghost" title="Reset demo state to initial client data">
-            <span class="btn-icon-slot">↺</span>
-            <span>Reset Demo</span>
-          </button>
-        </div>
+    <!-- Segmented Neo-Brutalist Top Navigation Bar -->
+    <header class="segmented-nav" id="main-header">
+      <div class="nav-segment brand-segment">
+        <span class="brand-heart">♥</span>
+        <span class="brand-name"><span class="brand-pink">MATCH</span>MAKER</span>
+        <span class="sub-label">THE DATE CREW</span>
+      </div>
+      <div class="nav-segment link-segment">
+        <span class="segment-title">GATEWAY OS</span>
+        <span class="segment-sub">PRE-SEND PROFILE GATE</span>
+      </div>
+      <div class="nav-segment client-segment">
+        <span class="dot-indicator dot-active"></span>
+        <span class="client-brief">Active Client: <strong>Elena Rostova</strong> (London)</span>
+      </div>
+      <div class="nav-segment gateway-segment">
+        <span class="status-indicator-dot" id="gateway-status-dot"></span>
+        <span class="gateway-badge-text" id="gateway-status-label">Checking AI Gateway...</span>
+      </div>
+      <div class="nav-segment action-segment">
+        <button id="btn-reset-demo" class="btn-nav-reset" title="Reset demo state to initial client data">
+          ↺ Reset Demo
+        </button>
       </div>
     </header>
 
-    <!-- Impact & Opportunity Hero Bar -->
-    <section class="metrics-bar-wrapper">
-      <div class="metrics-bar" id="metrics-bar" aria-label="Key Performance Indicators">
-        <div class="metric-card double-bezel">
-          <div class="bezel-inner">
-            <div class="metric-top-row">
-              <span class="metric-label">Preventable Conflict Baseline</span>
-              <span class="metric-trend-pill trend-down">−35% Target</span>
-            </div>
-            <div class="metric-value highlight-red">35.0%</div>
-            <div class="metric-sub">242 / 690 rejections violate known rules</div>
-            <div class="metric-progress-track">
-              <div class="metric-progress-bar bar-red" style="width: 35%;"></div>
-            </div>
-          </div>
+    <!-- Playful Hero Section with Warm Illustrations -->
+    <section class="hero-section" aria-label="Hero Introduction">
+      <!-- Floating Decal 1 -->
+      <div class="floating-decal decal-left" aria-hidden="true">
+        <div class="polaroid-card rotate-neg">
+          <span class="card-heart">♥</span>
         </div>
+        <div class="cloud-bubble bubble-pink"></div>
+      </div>
 
-        <div class="metric-card double-bezel">
-          <div class="bezel-inner">
-            <div class="metric-top-row">
-              <span class="metric-label">Projected Acceptance Rate</span>
-              <span class="metric-trend-pill trend-up">+9.9% Lift</span>
-            </div>
-            <div class="metric-value highlight-green">40.9%</div>
-            <div class="metric-sub">Surges from 31% (310 / 758 shares)</div>
-            <div class="metric-progress-track">
-              <div class="metric-progress-bar bar-green" style="width: 41%;"></div>
-            </div>
-          </div>
+      <!-- Floating Decal 2 -->
+      <div class="floating-decal decal-right" aria-hidden="true">
+        <div class="polaroid-card rotate-pos">
+          <span class="card-heart">♥</span>
         </div>
+        <div class="cloud-bubble bubble-peach"></div>
+      </div>
 
-        <div class="metric-card double-bezel">
-          <div class="bezel-inner">
-            <div class="metric-top-row">
-              <span class="metric-label">Human Agency Guarantee</span>
-              <span class="metric-trend-pill trend-neutral">In Loop</span>
-            </div>
-            <div class="metric-value highlight-blue">100%</div>
-            <div class="metric-sub">Matchmaker decides • Zero auto-emails</div>
-            <div class="metric-progress-track">
-              <div class="metric-progress-bar bar-blue" style="width: 100%;"></div>
-            </div>
-          </div>
-        </div>
+      <div class="hero-content">
+        <h1 class="hero-title">Find Your <span class="highlight-pink">Real Connections</span></h1>
+        <p class="hero-desc">
+          We committed to helping clients find lasting love without unforced errors. The Pre-Send Profile Gate stops preventable preference violations before profiles reach the client.
+        </p>
 
-        <div class="metric-card double-bezel">
-          <div class="bezel-inner">
-            <div class="metric-top-row">
-              <span class="metric-label">Guardrail Philosophy</span>
-              <span class="metric-trend-pill trend-neutral">Verified</span>
-            </div>
-            <div class="metric-value">Boundary Gate</div>
-            <div class="metric-sub">Prevents errors • Not opaque ranking</div>
-            <div class="metric-progress-track">
-              <div class="metric-progress-bar bar-indigo" style="width: 80%;"></div>
-            </div>
-          </div>
+        <div class="hero-cta-row">
+          <a href="#main-workspace" class="btn-hero-primary">
+            <span>Explore Pre-Send Gate</span>
+          </a>
         </div>
+      </div>
+
+      <!-- Center Hero Couple Illustration -->
+      <div class="hero-illustration-wrapper" aria-hidden="true">
+        <svg class="hero-svg" viewBox="0 0 800 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Background giant pastel heart -->
+          <path d="M400 320 C280 250 200 170 200 100 C200 45 245 10 305 10 C345 10 380 30 400 65 C420 30 455 10 495 10 C555 10 600 45 600 100 C600 170 520 250 400 320 Z" fill="#FFEAEF" stroke="#111111" stroke-width="2"/>
+          
+          <!-- Center speech bubble with heart -->
+          <g transform="translate(365, 120)">
+            <rect x="0" y="0" width="70" height="60" rx="16" fill="#FFFFFF" stroke="#111111" stroke-width="2"/>
+            <polygon points="25,60 35,72 45,60" fill="#FFFFFF" stroke="#111111" stroke-width="2"/>
+            <!-- Heart icon inside bubble -->
+            <path d="M35 44 C27 37 22 31 22 25 C22 20 25 17 29 17 C32 17 34 18 35 20 C36 18 38 17 41 17 C45 17 48 20 48 25 C48 31 43 37 35 44 Z" fill="#FF5C7A"/>
+          </g>
+
+          <!-- Botanical foliage left -->
+          <path d="M170 320 Q160 220 220 180" stroke="#E2A63B" stroke-width="3" stroke-linecap="round"/>
+          <ellipse cx="185" cy="230" rx="12" ry="7" transform="rotate(-35 185 230)" fill="#E2A63B"/>
+          <ellipse cx="205" cy="200" rx="12" ry="7" transform="rotate(-20 205 200)" fill="#E2A63B"/>
+
+          <!-- Botanical foliage right -->
+          <path d="M630 320 Q640 220 580 180" stroke="#E2A63B" stroke-width="3" stroke-linecap="round"/>
+          <ellipse cx="615" cy="230" rx="12" ry="7" transform="rotate(35 615 230)" fill="#E2A63B"/>
+          <ellipse cx="595" cy="200" rx="12" ry="7" transform="rotate(20 595 200)" fill="#E2A63B"/>
+
+          <!-- Character Left (Male in lime green hoodie) -->
+          <g id="char-left">
+            <!-- Hoodie body -->
+            <path d="M190 340 L190 270 C190 240 230 225 270 230 L320 255 L330 340 Z" fill="#B9F29E" stroke="#111111" stroke-width="2.5"/>
+            <!-- Arm & phone -->
+            <path d="M260 250 L290 280 L315 260 L290 235 Z" fill="#B9F29E" stroke="#111111" stroke-width="2"/>
+            <path d="M295 270 L325 240" stroke="#111111" stroke-width="4" stroke-linecap="round"/>
+            <rect x="305" y="225" width="16" height="30" rx="3" transform="rotate(22 305 225)" fill="#222" stroke="#111" stroke-width="1.5"/>
+            <!-- Hand on face -->
+            <path d="M245 250 Q235 220 240 190 Q255 180 265 210 Z" fill="#7C4E32" stroke="#111111" stroke-width="2"/>
+            <!-- Head & hair -->
+            <ellipse cx="270" cy="180" rx="32" ry="38" fill="#7C4E32" stroke="#111111" stroke-width="2"/>
+            <path d="M240 170 Q245 130 285 135 Q305 140 305 170 Q285 155 240 170 Z" fill="#222222" stroke="#111111" stroke-width="2"/>
+            <!-- Eye & smile -->
+            <ellipse cx="282" cy="175" rx="3.5" ry="4" fill="#111111"/>
+            <path d="M275 195 Q285 202 292 195" stroke="#111111" stroke-width="2" stroke-linecap="round"/>
+          </g>
+
+          <!-- Character Right (Female in light coral dress) -->
+          <g id="char-right">
+            <!-- Dress body -->
+            <path d="M610 340 L610 270 C610 240 570 225 530 230 L480 255 L470 340 Z" fill="#FFC9D2" stroke="#111111" stroke-width="2.5"/>
+            <!-- Arm & phone -->
+            <path d="M540 250 L510 280 L485 260 L510 235 Z" fill="#FFC9D2" stroke="#111111" stroke-width="2"/>
+            <rect x="475" y="235" width="16" height="30" rx="3" transform="rotate(-22 475 235)" fill="#222" stroke="#111" stroke-width="1.5"/>
+            <!-- Hand -->
+            <ellipse cx="495" cy="265" rx="10" ry="8" fill="#F0AC88" stroke="#111" stroke-width="2"/>
+            <!-- Head & hair -->
+            <ellipse cx="530" cy="180" rx="30" ry="36" fill="#F0AC88" stroke="#111111" stroke-width="2"/>
+            <!-- Dark wavy hair -->
+            <path d="M510 160 Q520 125 565 135 Q590 150 580 215 Q565 245 550 250 Q560 210 540 185 Z" fill="#4A3428" stroke="#111111" stroke-width="2"/>
+            <!-- Hoop earring -->
+            <ellipse cx="550" cy="195" rx="6" ry="9" stroke="#111111" stroke-width="2.5" fill="none"/>
+            <!-- Eye & smile -->
+            <ellipse cx="518" cy="175" rx="3.5" ry="4" fill="#111111"/>
+            <path d="M525 195 Q515 202 508 195" stroke="#111111" stroke-width="2" stroke-linecap="round"/>
+          </g>
+        </svg>
       </div>
     </section>
 
-    <!-- Main Workspace Grid -->
+    <!-- Three Value Proposition Feature Cards (Exact image style) -->
+    <section class="value-cards-grid" id="metrics-bar" aria-label="Key Pillars">
+      <!-- Card 1: Pastel Blue -->
+      <div class="value-card card-blue">
+        <div class="value-icon-box box-blue">
+          <span class="icon-glyph">⚙️</span>
+        </div>
+        <h2 class="value-title">Efficient Sourcing</h2>
+        <p class="value-desc">
+          Eliminating 242 unforced preference errors drops sends to 758 and surges profile acceptance from 31% to <strong>40.9%</strong>.
+        </p>
+        <div class="value-metric-footer">
+          <span class="badge-contrast">+9.9% Net Acceptance Lift</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Pastel Yellow -->
+      <div class="value-card card-yellow">
+        <div class="value-icon-box box-yellow">
+          <span class="icon-glyph">⚖️</span>
+        </div>
+        <h2 class="value-title">Human Balance</h2>
+        <p class="value-desc">
+          Matchmakers retain 100% agency. Zero automated client emails. Overrides require an intentional audit rationale.
+        </p>
+        <div class="value-metric-footer">
+          <span class="badge-contrast">100% Matchmaker Control</span>
+        </div>
+      </div>
+
+      <!-- Card 3: Pastel Pink with Starburst Decal -->
+      <div class="value-card card-pink">
+        <div class="value-icon-box box-pink">
+          <span class="icon-glyph">⛔</span>
+        </div>
+        <h2 class="value-title">Smart Blocking</h2>
+        <p class="value-desc">
+          Deterministic checks immediately block hard conflicts. Unknown facts trigger review—unknowns never yield false clears.
+        </p>
+        <div class="value-metric-footer">
+          <span class="badge-contrast">35% Baseline Waste Target</span>
+        </div>
+        <!-- Decorative pink starburst in corner -->
+        <div class="starburst-decal" aria-hidden="true">★</div>
+      </div>
+    </section>
+
+    <!-- Main Workspace Grid (3 Columns) -->
     <main class="workspace-grid" id="main-workspace">
 
       <!-- Column 1: Client Context & Confirmed Rules -->
-      <section class="panel client-panel double-bezel" id="panel-client">
-        <div class="bezel-inner">
-          <div class="panel-header">
-            <div class="panel-title-group">
-              <span class="panel-step">STEP 01</span>
-              <h2>Active Client & Rules</h2>
-            </div>
-            <span class="badge badge-active">Active Sourcing</span>
+      <section class="neo-panel client-panel" id="panel-client">
+        <div class="panel-top-bar">
+          <div class="panel-header-left">
+            <span class="step-tag">STEP 01</span>
+            <h2 class="panel-heading">Active Client & Rules</h2>
           </div>
+          <span class="status-pill pill-green">Active Sourcing</span>
+        </div>
 
-          <!-- Client Identity Card -->
-          <div class="client-card" id="client-card">
-            <div class="client-avatar-row">
-              <div class="avatar-ring">
-                <div class="avatar-fallback" id="client-initials">ER</div>
-              </div>
-              <div class="client-details">
-                <h3 id="client-name">Elena Rostova</h3>
-                <p class="client-meta" id="client-meta">31 yrs • London • Architectural Designer</p>
-                <div class="client-tags">
-                  <span class="tag">Cohort: Aug 2026</span>
-                  <span class="tag">Active Match Sourcing</span>
-                </div>
+        <!-- Client Identity Card -->
+        <div class="client-card" id="client-card">
+          <div class="client-avatar-row">
+            <div class="avatar-box">
+              <span class="avatar-text" id="client-initials">ER</span>
+            </div>
+            <div class="client-details">
+              <h3 id="client-name">Elena Rostova</h3>
+              <p class="client-meta" id="client-meta">31 yrs • London • Architectural Designer</p>
+              <div class="client-tags">
+                <span class="neo-tag">Cohort: Aug 2026</span>
+                <span class="neo-tag">Active Sourcing</span>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Confirmed Preferences List -->
-          <div class="section-subheading">
-            <div class="subheading-left">
-              <h3>Confirmed Boundaries</h3>
-              <span class="subheading-hint">Enforced by pre-send engine</span>
-            </div>
-            <span class="count-pill" id="rules-count-pill">5 Rules</span>
-          </div>
+        <!-- Confirmed Preferences List -->
+        <div class="section-subheading">
+          <h3>Confirmed Boundaries</h3>
+          <span class="count-pill" id="rules-count-pill">5 Rules</span>
+        </div>
+        <p class="section-desc">Active rules enforced by the pre-send gate. Direct conflicts block; unknowns trigger review.</p>
 
-          <div class="rules-list" id="confirmed-rules-container">
-            <!-- Populated by JS -->
-          </div>
+        <div class="rules-list" id="confirmed-rules-container">
+          <!-- Populated by JS -->
         </div>
       </section>
 
       <!-- Column 2: Rejection Feedback & AI Extraction -->
-      <section class="panel feedback-panel double-bezel" id="panel-feedback">
-        <div class="bezel-inner">
-          <div class="panel-header">
-            <div class="panel-title-group">
-              <span class="panel-step">STEP 02</span>
-              <h2>Rejection Intelligence</h2>
+      <section class="neo-panel feedback-panel" id="panel-feedback">
+        <div class="panel-top-bar">
+          <div class="panel-header-left">
+            <span class="step-tag">STEP 02</span>
+            <h2 class="panel-heading">Rejection Intelligence</h2>
+          </div>
+          <button id="btn-analyze-feedback" class="btn-neo btn-neo-pink">
+            <span class="btn-text">Analyze Feedback</span>
+            <span class="btn-icon">✦</span>
+          </button>
+        </div>
+
+        <div class="section-subheading">
+          <h3>Raw Date Rejection Notes</h3>
+          <span class="count-pill">2 Past Rejections</span>
+        </div>
+        <p class="section-desc">Unstructured qualitative reviews submitted by Elena after recent first dates.</p>
+
+        <!-- Feedback Comments List -->
+        <div class="feedback-notes-list" id="feedback-notes-container">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- AI Extraction Output Area -->
+        <div class="extraction-card" id="extraction-results-area">
+          <div class="extraction-header">
+            <div class="extraction-title-group">
+              <span class="chip-live-status" id="extraction-provenance-badge">AI Analysis Ready</span>
+              <h4>Structured Rule Suggestions</h4>
             </div>
-            <button id="btn-analyze-feedback" class="btn-island btn-primary">
-              <span class="btn-text">Analyze Feedback</span>
-              <span class="btn-nested-icon">✦</span>
-            </button>
+            <span class="confidence-badge" id="extraction-model-tag">Awaiting Trigger</span>
           </div>
 
-          <div class="section-subheading">
-            <div class="subheading-left">
-              <h3>Raw Client Feedback</h3>
-              <span class="subheading-hint">Unstructured qualitative date reviews</span>
-            </div>
-            <span class="count-pill">2 Past Rejections</span>
+          <p class="extraction-note" id="extraction-status-text">
+            Click <strong>"Analyze Feedback"</strong> to invoke the AI Gateway. Extracted rules are presented with confidence scores and verbatim quotes for human matchmaker confirmation.
+          </p>
+
+          <div class="suggestions-list" id="suggestions-container">
+            <!-- Populated dynamically upon analysis -->
           </div>
 
-          <!-- Feedback Comments List -->
-          <div class="feedback-notes-list" id="feedback-notes-container">
-            <!-- Populated by JS -->
-          </div>
-
-          <!-- AI Extraction Output Area -->
-          <div class="extraction-card" id="extraction-results-area">
-            <div class="extraction-header">
-              <div class="extraction-title-group">
-                <span class="chip-live-status" id="extraction-provenance-badge">AI Analysis Ready</span>
-                <h4>Structured Rule Suggestions</h4>
-              </div>
-              <span class="confidence-badge" id="extraction-model-tag">Awaiting Trigger</span>
-            </div>
-
-            <p class="extraction-note" id="extraction-status-text">
-              Click <strong>"Analyze Feedback"</strong> to invoke the AI Gateway. Extracted rules are presented with confidence scores and verbatim quotes for human matchmaker confirmation.
-            </p>
-
-            <div class="suggestions-list" id="suggestions-container">
-              <!-- Populated dynamically upon analysis -->
-            </div>
-
-            <div class="ai-boundary-disclaimer">
-              <span class="info-icon">ℹ</span>
-              <span><strong>Human Agency Mandate:</strong> Suggestions are never added to active rules automatically. The matchmaker confirms or dismisses each extracted preference.</span>
-            </div>
+          <div class="ai-boundary-disclaimer">
+            <span class="info-icon">ℹ</span>
+            <span><strong>Human Agency Mandate:</strong> Suggestions are never added to active rules automatically. The matchmaker confirms or dismisses each extracted preference.</span>
           </div>
         </div>
       </section>
 
       <!-- Column 3: Candidate Selection & Pre-Send Gate Check -->
-      <section class="panel gate-panel double-bezel" id="panel-gate">
-        <div class="bezel-inner">
-          <div class="panel-header">
-            <div class="panel-title-group">
-              <span class="panel-step">STEP 03</span>
-              <h2>Pre-Send Profile Gate</h2>
-            </div>
-            <button id="btn-run-gate-check" class="btn-island btn-accent">
-              <span class="btn-text">Run Pre-Send Check</span>
-              <span class="btn-nested-icon">→</span>
-            </button>
+      <section class="neo-panel gate-panel" id="panel-gate">
+        <div class="panel-top-bar">
+          <div class="panel-header-left">
+            <span class="step-tag">STEP 03</span>
+            <h2 class="panel-heading">Pre-Send Profile Gate</h2>
           </div>
+          <button id="btn-run-gate-check" class="btn-neo btn-neo-blue">
+            <span class="btn-text">Run Pre-Send Check</span>
+            <span class="btn-icon">→</span>
+          </button>
+        </div>
 
-          <div class="section-subheading">
-            <div class="subheading-left">
-              <h3>Proposed Candidate</h3>
-              <span class="subheading-hint">Factual attributes checked against Elena's rules</span>
-            </div>
-            <span class="count-pill">5 Test Candidates</span>
-          </div>
+        <div class="section-subheading">
+          <h3>Proposed Candidate Profile</h3>
+          <span class="count-pill">5 Test Candidates</span>
+        </div>
 
-          <!-- Candidate Selector -->
-          <div class="candidate-selector-wrapper">
-            <label for="candidate-select" class="visually-hidden">Select Candidate Profile</label>
-            <div class="custom-select-container">
-              <select id="candidate-select" class="custom-select">
-                <!-- Populated by JS -->
-              </select>
-              <span class="select-chevron" aria-hidden="true">▾</span>
-            </div>
-          </div>
-
-          <!-- Selected Candidate Attributes Card -->
-          <div class="candidate-summary-card" id="candidate-summary-card">
-            <div class="cand-header-row">
-              <div>
-                <h4 id="cand-display-name">Julian Vance</h4>
-                <span class="cand-job" id="cand-display-job">33 yrs • London • Creative Director</span>
-              </div>
-              <span class="cand-badge-intent" id="cand-display-badge">Seeded Incompatible</span>
-            </div>
-            <p class="cand-bio" id="cand-display-bio">Brand designer and weekend cyclist. Enjoys social drinks and casual weekend cigarettes with friends.</p>
-
-            <div class="cand-facts-grid" id="cand-facts-grid">
+        <!-- Candidate Selector -->
+        <div class="candidate-selector-wrapper">
+          <label for="candidate-select" class="visually-hidden">Select Candidate Profile</label>
+          <div class="custom-select-container">
+            <select id="candidate-select" class="custom-select">
               <!-- Populated by JS -->
+            </select>
+            <span class="select-chevron" aria-hidden="true">▾</span>
+          </div>
+        </div>
+
+        <!-- Selected Candidate Attributes Card -->
+        <div class="candidate-summary-card" id="candidate-summary-card">
+          <div class="cand-header-row">
+            <div>
+              <h4 id="cand-display-name">Julian Vance</h4>
+              <span class="cand-job" id="cand-display-job">33 yrs • London • Creative Director</span>
             </div>
+            <span class="cand-badge-intent" id="cand-display-badge">Seeded Incompatible</span>
+          </div>
+          <p class="cand-bio" id="cand-display-bio">Brand designer and weekend cyclist. Enjoys social drinks and casual weekend cigarettes with friends.</p>
+
+          <div class="cand-facts-grid" id="cand-facts-grid">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Pre-Send Decision Banner Area -->
+        <div class="gate-decision-area" id="gate-decision-area">
+          <div class="decision-placeholder" id="decision-placeholder">
+            <div class="radar-scan-icon">
+              <span>◎</span>
+            </div>
+            <h4>Gate Check Pending</h4>
+            <p>Select a candidate above and click <strong>"Run Pre-Send Check"</strong> to verify compliance against Elena's confirmed rules before dispatch.</p>
           </div>
 
-          <!-- Pre-Send Decision Banner Area -->
-          <div class="gate-decision-area" id="gate-decision-area">
-            <div class="decision-placeholder" id="decision-placeholder">
-              <div class="radar-scan-icon">
-                <span class="radar-ping"></span>
-                <span>◎</span>
-              </div>
-              <h4>Gate Check Pending</h4>
-              <p>Select a candidate above and click <strong>"Run Pre-Send Check"</strong> to verify compliance against Elena's confirmed rules before dispatch.</p>
-            </div>
-
-            <!-- Dynamic Result Box (Block / Review / Clear) -->
-            <div class="decision-result-box hidden" id="decision-result-box">
-              <!-- Populated by JS -->
-            </div>
+          <!-- Dynamic Result Box (Block / Review / Clear) -->
+          <div class="decision-result-box hidden" id="decision-result-box">
+            <!-- Populated by JS -->
           </div>
+        </div>
 
-          <!-- Action / Override Row -->
-          <div class="gate-actions-row hidden" id="gate-actions-row">
-            <button id="btn-open-override" class="btn-outline-danger">
-              <span class="btn-icon-slot">⚠️</span>
-              <span>Log Matchmaker Override Rationale</span>
-            </button>
-            <button id="btn-simulate-send" class="btn-success disabled" disabled>
-              <span class="btn-icon-slot">✓</span>
-              <span>Ready to Dispatch Profile</span>
-            </button>
-          </div>
+        <!-- Action / Override Row -->
+        <div class="gate-actions-row hidden" id="gate-actions-row">
+          <button id="btn-open-override" class="btn-neo-outline-danger">
+            <span>⚠️ Log Matchmaker Override Rationale</span>
+          </button>
+          <button id="btn-simulate-send" class="btn-neo-success disabled" disabled>
+            <span>✓ Ready to Dispatch Profile</span>
+          </button>
         </div>
       </section>
 
@@ -292,40 +350,38 @@
 
     <!-- Override Rationale Modal Dialog -->
     <dialog id="override-dialog" class="custom-dialog">
-      <div class="dialog-content double-bezel">
-        <div class="bezel-inner">
-          <div class="dialog-header">
-            <div class="dialog-title-group">
-              <span class="warning-triangle">⚠️</span>
-              <h3>Matchmaker Discretion Override</h3>
-            </div>
-            <button id="btn-close-dialog" class="btn-dialog-close" aria-label="Close dialog">✕</button>
+      <div class="dialog-content neo-modal">
+        <div class="dialog-header">
+          <div class="dialog-title-group">
+            <span class="warning-triangle">⚠️</span>
+            <h3>Matchmaker Discretion Override</h3>
+          </div>
+          <button id="btn-close-dialog" class="btn-dialog-close" aria-label="Close dialog">✕</button>
+        </div>
+
+        <div class="dialog-body">
+          <div class="override-warning-box">
+            <p><strong>Intentional Exception:</strong> Matchmakers retain ultimate discretion to proceed if client nuances justify an exception. Overrides do NOT mutate saved preferences or send emails automatically.</p>
           </div>
 
-          <div class="dialog-body">
-            <div class="override-warning-box">
-              <p><strong>Intentional Exception:</strong> Matchmakers retain ultimate discretion to proceed if client nuances justify an exception. Overrides do NOT mutate saved preferences or send emails automatically.</p>
-            </div>
-
-            <div class="dialog-field">
-              <label for="override-matchmaker-name">Matchmaker Identity</label>
-              <input type="text" id="override-matchmaker-name" value="Lead Matchmaker (Curation Desk)" class="text-input">
-            </div>
-
-            <div class="dialog-field">
-              <label for="override-rationale">Mandatory Override Rationale <span class="req">*</span></label>
-              <textarea id="override-rationale" rows="3" class="text-area" placeholder="Explain the specific client discussion or context that justifies sending this profile despite the gate warning (e.g., 'Elena explicitly confirmed on phone that social smoking is acceptable if candidate is planning to quit')."></textarea>
-            </div>
-
-            <div class="dialog-audit-note">
-              This rationale will be recorded in the compliance audit trail for weekly cohort quality review.
-            </div>
+          <div class="dialog-field">
+            <label for="override-matchmaker-name">Matchmaker Identity</label>
+            <input type="text" id="override-matchmaker-name" value="Lead Matchmaker (Curation Desk)" class="text-input">
           </div>
 
-          <div class="dialog-footer">
-            <button id="btn-cancel-override" class="btn-ghost">Cancel</button>
-            <button id="btn-submit-override" class="btn-primary">Confirm & Log Override</button>
+          <div class="dialog-field">
+            <label for="override-rationale">Mandatory Override Rationale <span class="req">*</span></label>
+            <textarea id="override-rationale" rows="3" class="text-area" placeholder="Explain the specific client discussion or context that justifies sending this profile despite the gate warning (e.g., 'Elena explicitly confirmed on phone that social smoking is acceptable if candidate is planning to quit')."></textarea>
           </div>
+
+          <div class="dialog-audit-note">
+            This rationale will be recorded in the compliance audit trail for weekly cohort quality review.
+          </div>
+        </div>
+
+        <div class="dialog-footer">
+          <button id="btn-cancel-override" class="btn-neo-ghost">Cancel</button>
+          <button id="btn-submit-override" class="btn-neo btn-neo-pink">Confirm & Log Override</button>
         </div>
       </div>
     </dialog>
@@ -333,7 +389,7 @@
     <!-- Toast Notification Container -->
     <div id="toast-container" class="toast-container" aria-live="polite"></div>
 
-    <!-- Educational Bottom Console Footer -->
+    <!-- Bottom Footer Console -->
     <footer class="system-footer">
       <div class="footer-content">
         <div class="footer-col">
@@ -341,14 +397,15 @@
           <span>Deterministic Gate + Experiential Labs AI Integration • Zero Runtime NPM Dependencies</span>
         </div>
         <div class="footer-col">
-          <strong>Architectural Constraint</strong>
-          <span>Assistive verification only. Never replaces human judgment or automates client messaging.</span>
+          <strong>Design System</strong>
+          <span>MatchMaker Neo-Brutalist Soft-Pop Editorial Edition</span>
         </div>
         <div class="footer-col stats-col">
           <span class="metric-pill">Target Waste Elimination: 242 shares / 1,000</span>
         </div>
       </div>
     </footer>
+
   </div>
 
   <script src="app.js"></script>

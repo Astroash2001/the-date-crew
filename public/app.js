@@ -238,7 +238,7 @@
   // Analyze Feedback Action
   btnAnalyzeFeedback.addEventListener('click', async () => {
     btnAnalyzeFeedback.disabled = true;
-    btnAnalyzeFeedback.innerHTML = `<span class="btn-text">Extracting Boundaries...</span><span class="btn-nested-icon">⏳</span>`;
+    btnAnalyzeFeedback.innerHTML = `<span class="btn-text">Extracting...</span><span class="btn-icon">⏳</span>`;
     extractionStatusText.textContent = 'Calling AI Gateway to synthesize structured rules from unstructured feedback...';
 
     try {
@@ -271,7 +271,7 @@
       showToast('Error during feedback analysis', 'warn');
     } finally {
       btnAnalyzeFeedback.disabled = false;
-      btnAnalyzeFeedback.innerHTML = `<span class="btn-text">Re-Analyze Feedback</span><span class="btn-nested-icon">✦</span>`;
+      btnAnalyzeFeedback.innerHTML = `<span class="btn-text">Re-Analyze Feedback</span><span class="btn-icon">✦</span>`;
     }
   });
 
@@ -338,7 +338,7 @@
     if (!selectedCandidate) return;
 
     btnRunGateCheck.disabled = true;
-    btnRunGateCheck.innerHTML = `<span class="btn-text">Evaluating...</span><span class="btn-nested-icon">⏳</span>`;
+    btnRunGateCheck.innerHTML = `<span class="btn-text">Evaluating...</span><span class="btn-icon">⏳</span>`;
 
     try {
       const res = await fetch('/api/pre-send-check', {
@@ -355,7 +355,7 @@
       showToast('Error running gate check', 'warn');
     } finally {
       btnRunGateCheck.disabled = false;
-      btnRunGateCheck.innerHTML = `<span class="btn-text">Run Pre-Send Check</span><span class="btn-nested-icon">→</span>`;
+      btnRunGateCheck.innerHTML = `<span class="btn-text">Run Pre-Send Check</span><span class="btn-icon">→</span>`;
     }
   });
 
